@@ -50,10 +50,7 @@
 }
 
 .mailchimp__setup-dialog-content {
-	padding-top: 24px;
-	padding-left: 24px;
-	padding-bottom: 24px;
-	padding-right: 24px;
+	padding: 16px 24px;
 }
 
 .mailchimp__setup-dialog-progress {
@@ -63,14 +60,18 @@
 .mailchimp__setup-dialog-title {
 	font-size: 24px;
 	padding-top: 24px;
-  padding-left: 24px;
-  padding-bottom: 10px;
+	padding-left: 24px;
+	padding-bottom: 8px;
 }
 
 .setup-steps__login-title {
 	font-size: 18px;
 	font-weight: 500;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
+}
+
+.setup-steps__sync-explanation {
+	margin-top: 16px;
 }
 
 .setup-steps__campaign-defaults,
@@ -81,31 +82,32 @@
 	}
 }
 
+.setup-steps__store-info-field .payments__currency-container {
+	padding-left: 0;
+}
+
 .setup-steps__campaign-defaults-title {
 	font-size: 16px;
 	font-weight: 500;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
 
 .setup-steps__mailchimp-api-intro-notice {
 	font-size: 16px;
 	font-weight: 500;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
 
 .setup-steps__mailchimp-api-directions-bold {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .setup-steps__mailchimp-api-directions {
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
 
-.setup-steps__mailchimp-login-button {
-	margin-top: 10px;
-	.gridicon {
-		padding-left: 10px;
-	}
+.setup-steps__mailchimp-login-button .gridicon {
+	padding-left: 8px;
 }
 
 .mailchimp__loading {
