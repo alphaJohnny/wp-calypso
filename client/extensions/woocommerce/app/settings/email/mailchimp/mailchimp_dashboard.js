@@ -62,12 +62,12 @@ const SyncTab = localize( ( { siteId, translate, syncState, resync } ) => {
 
 	return (
 		<div>
-			<div>
+			<div className="mailchimp__account-info-name">
 				<span className="mailchimp__account-info">{ translate( 'MailChimp account:' ) }</span>
 				<span>{ account_name }</span>
 			</div>
-			<span>{ store_syncing ? syncing() : synced() }</span>
-			<a onClick={ onResyncClick }>{ translate( 'Resync' ) }</a>
+			<span className="mailchimp__sync-status">{ store_syncing ? syncing() : synced() }</span>
+			<a className="mailchimp__resync-link" onClick={ onResyncClick }>{ translate( 'Resync' ) }</a>
 			<div>
 				<span className="mailchimp__account-info" >{ translate( 'Products:' ) }</span>
 				<span>{ products }</span>
@@ -136,7 +136,7 @@ const Settings = localize( ( { translate, settings, oldCheckbox, isSubbmittingSe
 				</FormFieldset>
 			</span>
 			<span className="mailchimp__dashboard-settings-preview">
-				<div>{ translate( 'PREVIEW' ) }</div>
+				<div className="mailchimp__dashboard-settings-preview-heading">{ translate( 'PREVIEW' ) }</div>
 				<div className="mailchimp__dashboard-settings-preview-view">
 					{ toggle && <FormLabel>
 							<FormCheckbox checked={ checkbox === 'check' } disabled={ true } />
@@ -204,7 +204,9 @@ class MailChimpDashboard extends React.Component {
 					<div className="mailchimp__dashboard-first-section" >
 						<span className="mailchimp__dashboard-title-and-slogan">
 							<div className="mailchimp__dashboard-title">MailChimp</div>
-							<div>{ translate( 'Allow customers to subscribe to your MailChimp email list' ) }</div>
+							<div className="mailchimp__header-description">
+								{ translate( 'Allow customers to subscribe to your MailChimp email list' ) }
+							</div>
 						</span>
 						<span className="mailchimp__dashboard-sync-status" >
 							<SyncTab
