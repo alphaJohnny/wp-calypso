@@ -41,7 +41,7 @@ export const requestingSettingsError = ( state, siteId ) => {
 	return get( state, path, null );
 };
 
-export const mailchimpSettings = ( state, siteId ) => {
+export const mailChimpSettings = ( state, siteId ) => {
 	const path = [ ...basePath( siteId ), 'settings' ];
 
 	return get( state, path, null );
