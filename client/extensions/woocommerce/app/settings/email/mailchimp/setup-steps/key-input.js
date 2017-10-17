@@ -25,7 +25,7 @@ const KeyInputStep = localize( ( { translate, onChange, apiKey, isKeyCorrect } )
 			</span>
 			{ translate( ' From there, grab an existing key or generate a new one for your store.' ) }</p>
 		</div>
-		<FormLabel required={ ! isKeyCorrect }>
+		<FormLabel required >
 			{ translate( 'Mailchimp API Key:' ) }
 		</FormLabel>
 		<FormTextInput
@@ -35,7 +35,11 @@ const KeyInputStep = localize( ( { translate, onChange, apiKey, isKeyCorrect } )
 			onChange={ onChange }
 			value={ apiKey }
 		/>
-		{ ! isKeyCorrect && <FormInputValidation isError text="Key appears to be invalid" /> }
+		{ ! isKeyCorrect && (
+			apiKey
+			? <FormInputValidation isError text={ translate( 'Key appears to be invalid.' ) } />
+			: <FormInputValidation isError text={ translate( 'An API key is required to make a connection.' ) } />
+		) }
 	</FormFieldset>
 ) );
 
